@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1279</width>
+    <height>901</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(161, 205, 255);</string>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1281</width>
+      <height>841</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-top-color: rgb(139, 177, 221);
+font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="analyze">
+     <attribute name="title">
+      <string>Analysis</string>
+     </attribute>
+     <widget class="QTableWidget" name="tab1_df">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>931</width>
+        <height>239</height>
+       </rect>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(234, 234, 234);
+border-top-color: rgb(139, 177, 221);
+font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="train_info">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>50</y>
+        <width>311</width>
+        <height>239</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>10</y>
+        <width>291</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 16pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Train Sample Dataset</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>970</x>
+        <y>20</y>
+        <width>261</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 13pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Train Data Information</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Xlabel">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>300</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 10pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>X label</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Ylabel">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>300</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 10pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Y label</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pivot_submit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>740</y>
+        <width>301</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 16pt &quot;Comic Sans MS&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(139, 177, 221);</string>
+      </property>
+      <property name="text">
+       <string>submit</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="chart_lbl">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>300</y>
+        <width>841</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>340</y>
+        <width>151</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout"/>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>340</y>
+        <width>160</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2"/>
+     </widget>
+     <widget class="QPushButton" name="sample_btn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(139, 177, 221);
+font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>sample</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="all_btn">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>20</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(139, 177, 221);
+font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>all</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Processing and ML</string>
+     </attribute>
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>1241</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout"/>
+     </widget>
+     <widget class="QPushButton" name="Insert">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>110</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(139, 177, 221);
+font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Insert to null</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>130</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>for</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="ins_combo">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>120</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Average</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mode</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Middle</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="del_btn">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>110</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(139, 177, 221);
+font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>DEL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Smoothing">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>110</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(139, 177, 221);
+font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Smoothing</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Sum">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>110</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(139, 177, 221);
+font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Sum</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>1060</x>
+        <y>130</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>to</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="sum_text">
+      <property name="geometry">
+       <rect>
+        <x>1090</x>
+        <y>110</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>1241</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>210</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Live Dataset</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tab2_df">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>240</y>
+        <width>1241</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(234, 234, 234);
+border-top-color: rgb(139, 177, 221);
+font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>130</y>
+        <width>64</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>for</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="smooth_combo">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>120</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Average</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mode</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Median</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QCheckBox" name="KNN">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>610</y>
+        <width>96</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>KNN</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Decision_Tree">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>610</y>
+        <width>161</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Decision Tree</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Random_Forest">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>610</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Random Forest</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Naive_Bayes">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>610</y>
+        <width>141</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Naive Bayes</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="SVM">
+      <property name="geometry">
+       <rect>
+        <x>980</x>
+        <y>610</y>
+        <width>96</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>SVM</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ML_submit">
+      <property name="geometry">
+       <rect>
+        <x>1100</x>
+        <y>610</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(234, 234, 234);
+font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Submit</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>670</y>
+        <width>1131</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">selection-color: rgb(139, 177, 221);</string>
+      </property>
+      <property name="value">
+       <number>24</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Accuracy_best">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>710</y>
+        <width>291</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="KNN_num">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>610</y>
+        <width>43</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Random_Forest_num">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>610</y>
+        <width>43</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>610</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 14pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>K-fold : </string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="K_fold">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>610</y>
+        <width>43</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>520</y>
+        <width>64</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 10pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Target</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>510</y>
+        <width>1241</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>560</y>
+        <width>1241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="Target_list"/>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>710</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="others"/>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>730</y>
+        <width>881</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="Accuracy_layout"/>
+     </widget>
+     <widget class="QLabel" name="classifier_lbl">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>740</y>
+        <width>301</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="live_down_btn">
+      <property name="geometry">
+       <rect>
+        <x>1160</x>
+        <y>210</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(139, 177, 221);
+font: 75 9pt &quot;Comic Sans MS&quot;;</string>
+      </property>
+      <property name="text">
+       <string>DownLoad</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1279</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
